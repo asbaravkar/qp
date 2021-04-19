@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    QP | Search Results
+{% endblock %}
+
+
+{% block content %}
+    {% for key in form %}
+        <h1>{{ key }}</h1>
+    {% endfor %}
+{% endblock %}
