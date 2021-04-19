@@ -1,4 +1,5 @@
 from flask import render_template, Blueprint, request
+from qp.forms import ContactForm
 
 
 main = Blueprint('main', __name__)
@@ -17,7 +18,8 @@ def about_page():
 
 @main.route('/contact')
 def contact_page():
-    return render_template('contact.html')
+    form = ContactForm()
+    return render_template('contact.html', form = form)
 
 @main.route('/result', methods=['POST', 'GET'])
 def result_page():

@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from qp.config import Config
 
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)

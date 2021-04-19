@@ -2,11 +2,35 @@
 
 <!-- title of page -->
 {% block title %}
-    QP | Contact
+QP | Contact
 {% endblock %}
 
 
 <!-- content of page -->
 {% block content %}
-    Contact page
+<div class="container text-center py-3">
+    <h3 class="display-3">Reach out to us</h3>
+</div>
+
+
+<div class="container">
+    <form action="" class="form-control" method="POST" >
+        {{ form.name.label }}
+        {{ form.name(class='form-control mb-4', placeholder = 'Enter your name') }}
+
+        {{ form.email.label }}
+        {{ form.email(class='form-control mb-4', placeholder = 'Enter your email') }}
+
+        {{ form.subject.label }}
+        {{ form.subject(class='form-control mb-4', placeholder = 'Enter subject') }}
+
+        {{ form.message.label }}
+        {{ form.message(class='form-control mb-4', placeholder = 'Type your message') }}
+
+        <div class="container text-center">
+            {{ form.submit(class = 'btn btn-success btn-lg bg-gradient') }}
+        </div>
+    </form>
+</div>
+
 {% endblock %}
