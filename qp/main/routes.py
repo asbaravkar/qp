@@ -24,8 +24,7 @@ def contact_page():
 @main.route('/result', methods=['POST', 'GET'])
 def result_page():
     if request.method == 'POST':
-        course = request.form.get('course')
         branch = request.form.get('branch')
         sem = request.form.get('semester')
-        form_data = [course, branch, sem]
+        form_data = [branch, sem]
         return render_template('result.html', form=form_data)

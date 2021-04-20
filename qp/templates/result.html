@@ -4,9 +4,37 @@
     QP | Search Results
 {% endblock %}
 
-
+<!-- Table will be generated in loop for different subject -->
 {% block content %}
-    {% for key in form %}
-        <h1>{{ key }}</h1>
-    {% endfor %}
+    <div class="container text-center pt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="display-3 mt-3">{{ form[0] }} Engineering</h4>
+                <h3>Semester - {{ form[1] }}</h3>
+            </div>
+            <div class="card-body">
+                <!--  should be in Loop -->
+                <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Month</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- should be in loop -->
+                        <tr>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td><button class="btn btn-primary bg-gradient">Download</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
 {% endblock %}
